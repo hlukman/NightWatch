@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,114 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Night_Watch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="the_wall" translatesAutoresizingMaskIntoConstraints="NO" id="Hey-KB-Cz0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Night's Watch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-rZ-2Mg">
+                                <rect key="frame" x="9.6666666666666572" y="54" width="355.66666666666674" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.5" height="0.5"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ2-Gx-sFx">
+                                <rect key="frame" x="20" y="743" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="CwB-MT-ci6"/>
+                                    <constraint firstAttribute="height" constant="40" id="xTY-ZE-fiz"/>
+                                </constraints>
+                                <state key="normal" image="sirena3-512">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O52-kU-MhC"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jv-RN-XQS">
+                                <rect key="frame" x="30" y="500" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyF-p9-CZS">
+                                <rect key="frame" x="30" y="538" width="315" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="W4F-xM-iA1"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hey-KB-Cz0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="4u2-Hq-7LO"/>
+                            <constraint firstItem="Hey-KB-Cz0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="77U-O2-sc8"/>
+                            <constraint firstItem="PPU-rZ-2Mg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9Z4-ZR-edJ"/>
+                            <constraint firstItem="wZ2-Gx-sFx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HMq-1p-bcO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PPU-rZ-2Mg" secondAttribute="trailing" constant="8" id="LRk-YZ-OGV"/>
+                            <constraint firstItem="qyF-p9-CZS" firstAttribute="leading" secondItem="7jv-RN-XQS" secondAttribute="leading" id="Lu6-z3-P61"/>
+                            <constraint firstItem="PPU-rZ-2Mg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ZeP-58-jCm"/>
+                            <constraint firstItem="wZ2-Gx-sFx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="5" id="b5Z-5k-ydr"/>
+                            <constraint firstItem="qyF-p9-CZS" firstAttribute="trailing" secondItem="7jv-RN-XQS" secondAttribute="trailing" id="b9x-Ke-eMH"/>
+                            <constraint firstItem="wZ2-Gx-sFx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gPw-DD-q22"/>
+                            <constraint firstItem="PPU-rZ-2Mg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gSG-74-rKh"/>
+                            <constraint firstItem="7jv-RN-XQS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="i7Q-DB-BmU"/>
+                            <constraint firstItem="Hey-KB-Cz0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="n6h-bO-jcw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7jv-RN-XQS" secondAttribute="trailing" constant="30" id="pPz-of-Xdf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qyF-p9-CZS" secondAttribute="bottom" constant="40" id="r3f-Vc-UJ0"/>
+                            <constraint firstItem="qyF-p9-CZS" firstAttribute="top" secondItem="7jv-RN-XQS" secondAttribute="bottom" constant="8" id="tYd-uG-RYl"/>
+                            <constraint firstItem="Hey-KB-Cz0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vS6-HE-3E0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="alertButton" destination="wZ2-Gx-sFx" id="4cH-ZT-2Mm"/>
+                        <outlet property="consoleField" destination="qyF-p9-CZS" id="G69-WS-heN"/>
+                        <outlet property="deviceTokenField" destination="7jv-RN-XQS" id="sJa-ow-bYj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="95w-Kx-aoK">
+            <objects>
+                <viewController storyboardIdentifier="nightKing" id="IaY-pZ-Cnr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pTc-Ul-XwV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="got-nightking" translatesAutoresizingMaskIntoConstraints="NO" id="bx3-F8-All">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bx3-F8-All" firstAttribute="leading" secondItem="pTc-Ul-XwV" secondAttribute="leading" id="67D-kt-UDU"/>
+                            <constraint firstAttribute="trailing" secondItem="bx3-F8-All" secondAttribute="trailing" id="VMI-Td-qeV"/>
+                            <constraint firstAttribute="bottom" secondItem="bx3-F8-All" secondAttribute="bottom" id="Z4B-vy-a1l"/>
+                            <constraint firstItem="bx3-F8-All" firstAttribute="top" secondItem="pTc-Ul-XwV" secondAttribute="top" id="bSh-N8-GGv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r8U-Gq-7RE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OIV-QV-4CA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112.8" y="120.44334975369459"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="got-nightking" width="750" height="563"/>
+        <image name="sirena3-512" width="512" height="512"/>
+        <image name="the_wall" width="1920" height="1080"/>
+    </resources>
 </document>
