@@ -137,12 +137,6 @@
                                     <action selector="tapMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O52-kU-MhC"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Device Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jv-RN-XQS">
-                                <rect key="frame" x="30" y="451" width="315" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyF-p9-CZS">
                                 <rect key="frame" x="30" y="489" width="315" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -158,20 +152,17 @@
                         <constraints>
                             <constraint firstItem="Hey-KB-Cz0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="4u2-Hq-7LO"/>
                             <constraint firstItem="Hey-KB-Cz0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="77U-O2-sc8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qyF-p9-CZS" secondAttribute="trailing" constant="30" id="83a-fJ-p5j"/>
                             <constraint firstItem="PPU-rZ-2Mg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9Z4-ZR-edJ"/>
                             <constraint firstItem="wZ2-Gx-sFx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HMq-1p-bcO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PPU-rZ-2Mg" secondAttribute="trailing" constant="8" id="LRk-YZ-OGV"/>
-                            <constraint firstItem="qyF-p9-CZS" firstAttribute="leading" secondItem="7jv-RN-XQS" secondAttribute="leading" id="Lu6-z3-P61"/>
                             <constraint firstItem="PPU-rZ-2Mg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="ZeP-58-jCm"/>
                             <constraint firstItem="wZ2-Gx-sFx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="5" id="b5Z-5k-ydr"/>
-                            <constraint firstItem="qyF-p9-CZS" firstAttribute="trailing" secondItem="7jv-RN-XQS" secondAttribute="trailing" id="b9x-Ke-eMH"/>
                             <constraint firstItem="wZ2-Gx-sFx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gPw-DD-q22"/>
                             <constraint firstItem="PPU-rZ-2Mg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gSG-74-rKh"/>
-                            <constraint firstItem="7jv-RN-XQS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="i7Q-DB-BmU"/>
                             <constraint firstItem="Hey-KB-Cz0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="n6h-bO-jcw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7jv-RN-XQS" secondAttribute="trailing" constant="30" id="pPz-of-Xdf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qyF-p9-CZS" secondAttribute="bottom" constant="40" id="r3f-Vc-UJ0"/>
-                            <constraint firstItem="qyF-p9-CZS" firstAttribute="top" secondItem="7jv-RN-XQS" secondAttribute="bottom" constant="8" id="tYd-uG-RYl"/>
+                            <constraint firstItem="qyF-p9-CZS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="uxB-cC-ihZ"/>
                             <constraint firstItem="Hey-KB-Cz0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vS6-HE-3E0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -180,7 +171,6 @@
                     <connections>
                         <outlet property="alertButton" destination="wZ2-Gx-sFx" id="4cH-ZT-2Mm"/>
                         <outlet property="consoleField" destination="qyF-p9-CZS" id="G69-WS-heN"/>
-                        <outlet property="deviceTokenField" destination="7jv-RN-XQS" id="sJa-ow-bYj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

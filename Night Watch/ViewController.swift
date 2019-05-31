@@ -17,7 +17,6 @@ extension Notification.Name {
 
 class ViewController: UIViewController {
   
-  @IBOutlet weak var deviceTokenField: UITextField!
   @IBOutlet weak var consoleField: UITextView!
   @IBOutlet weak var alertButton: UIButton!
   
@@ -30,7 +29,6 @@ class ViewController: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    deviceTokenField.text = Globals.shared.deviceToken;
     consoleField.text = Globals.shared.consoleText;
   }
   
@@ -58,10 +56,7 @@ class ViewController: UIViewController {
   }
   
   @objc func dataUpdate(_ notification: Notification) {
-    deviceTokenField.text = Globals.shared.deviceToken;
     consoleField.text = Globals.shared.consoleText;
-    
-    deviceTokenField.setNeedsDisplay()
     consoleField.setNeedsDisplay()
 
     if (notification.userInfo != nil) {

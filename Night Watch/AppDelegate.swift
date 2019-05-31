@@ -50,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) {
     let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
     let token = tokenParts.joined()
+    Globals.shared.printConsole("Device name: " + UIDevice.current.name)
     Globals.shared.printConsole("Device Token: \(token)")
     Globals.shared.saveDeviceToken(token)
     
@@ -89,8 +90,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func getNotificationSettings() {
     UNUserNotificationCenter.current().getNotificationSettings { settings in
-      Globals.shared.printConsole("Notification settings: \(settings)")
-      
       guard settings.authorizationStatus == .authorized else { return }
       DispatchQueue.main.async {
         UIApplication.shared.registerForRemoteNotifications()
