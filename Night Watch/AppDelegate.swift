@@ -73,6 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       return
     }
     // Do something
+    Globals.shared.processNotification(aps);
   }
   
   func registerForPushNotifications() {

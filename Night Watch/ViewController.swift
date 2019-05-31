@@ -58,13 +58,19 @@ class ViewController: UIViewController {
   }
   
   @objc func dataUpdate(_ notification: Notification) {
-    print(notification);
-    self.view.setNeedsDisplay()
-    
     deviceTokenField.text = Globals.shared.deviceToken;
     consoleField.text = Globals.shared.consoleText;
+    
+    deviceTokenField.setNeedsDisplay()
+    consoleField.setNeedsDisplay()
+
+    if (notification.userInfo != nil) {
+      let priority = notification.userInfo!["priority"] as! Int;
+      if (priority == 1) {
+        tapMe(alertButton!)
+      }
+    }
   }
-  
 }
 
 extension ViewController: UIPopoverPresentationControllerDelegate {

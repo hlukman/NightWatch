@@ -31,7 +31,23 @@ class Globals {
     return consoleText;
   }
   
-  func resetConsole() -> Void {
+  func resetConsole() {
     consoleText = "";
+  }
+  
+  func getNowTime() -> String {
+    let df = DateFormatter();
+    df.dateFormat = "yyyy-MM-dd hh:mm:ss";
+    return df.string(from: Date());
+  }
+  
+  func processNotification(_ aps:[String: AnyObject]) {
+    print(aps);
+    let alertMsg = aps["alert"] as! String;
+    let priority = aps["priority"] as! Int;
+    
+    printConsole(getNowTime() + ": \(alertMsg) -- Priority: \(priority)");
+    
+    NotificationCenter.default.post(name: .updateData, object: nil, userInfo: aps)
   }
 }
